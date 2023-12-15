@@ -19,8 +19,8 @@
       -> Copy the color mode (HSL)
   */
 
-  --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
+  --hue: 210;
+  --first-color: hsl(var(--hue), 100%, 70%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
@@ -271,23 +271,31 @@ svg {
 }
 
 .home__description{
-  margin-bottom: 1rem 1.5rem;
+  margin-top: 1rem;      /* Top margin */
+  margin-right: 1.5rem;  /* Right margin */
+  margin-bottom: 1rem;   /* Bottom margin */
+  margin-left: 1.5rem;   /* Left margin */
 }
 
-.home__social{
+
+.home__social {
   display: flex;
   justify-content: center;
   column-gap: 1.25rem;
 }
 
-.home__social-link{
+.home__social-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--first-color-alt);
-  padding: .5rem;
   color: var(--title-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: transform .4s;
+  position: relative;
+  width: 50px; /* Adjust as needed */
+  height: 55px; /* Adjust as needed */
 }
 
 .home__social-link:hover{
@@ -323,6 +331,9 @@ svg {
   transition: box-shadow .4s;
 }
 
+.button:hover{
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
+}
 
 /*=============== ABOUT ===============*/
 
