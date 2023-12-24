@@ -29,15 +29,76 @@ const linkAction = () =>{
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /*=============== ADD BLUR TO HEADER ===============*/
-
+const blurHeader = () =>{
+    const header = document.getElementById('header')
+    // When the scroll is greater than 50 viewport height, add the blur-header class to the header tag
+    this.scrollY >= 50 ? header.classList.add('blur-header') 
+                       : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById('contact-form'),
+      contactMessage = document.getElementById('contact-message')
 
+const sendEmail = (e) =>{
+    e.preventDefault()
+
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_gz8q08j', 'template_11345ks', '#contact-form', 'N5tp76Lh3xMgNAAYy')
+        .then(() =>{
+            // Show sent message
+            contactMessage.textContent = 'Message sent successfully! 😊'
+
+            // Remove message after 5 seconds
+            setTimeout(() =>{
+                contactMessage.textContent = ''
+            }, 5000)
+
+            // Clear input fields
+            contactForm.reset()
+
+        }, () =>{
+            // Show error message
+            contactMessage.textContent = 'Message not sent (service error) 😢'
+        })
+}
+
+contactForm.addEventListener('submit', sendEmail)
 
 /*=============== SHOW SCROLL UP ===============*/ 
-
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]');
+
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 58; // Adjust as necessary
+        const sectionId = current.getAttribute('id');
+        const sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+        // Check if the navbar link exists before trying to add/remove classes
+        if (sectionsClass) {
+            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link');
+            } else {
+                sectionsClass.classList.remove('active-link');
+            }
+        }
+    });
+};
+
+window.addEventListener('scroll', scrollActive);
 
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
