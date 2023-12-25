@@ -427,7 +427,7 @@ svg {
   display: flex; /* This will create a flex container which aligns children in a row by default */
   flex-wrap: wrap; /* This allows the items to wrap onto the next line if the container is not wide enough */
   justify-content: center; /* This will center the items horizontally */
-  gap: 2rem; /* This creates space between the items */
+  gap: 1rem; /* This creates space between the items */
   padding-block: 1rem;
 }
 
@@ -438,7 +438,7 @@ svg {
   border-radius: 1rem;
   border: 2px solid var(--container-color);
   transition: border .4s;
-  flex: 0 1 calc(33.333% - 4rem); /* This allows the cards to be flexible but not grow beyond 1/3 of the container width, minus the gap */
+  flex: 0 1 calc(35% - 4rem); /* This allows the cards to be flexible but not grow beyond 1/3 of the container width, minus the gap */
   margin: 1rem; /* This margin may need to be adjusted or removed depending on your design */
 }
 
@@ -498,12 +498,13 @@ svg {
   align-items: center;
   justify-content: center;
   transition: bottom .4s;
+  text-align: center;
 }
 
 .projects__subtitle,
 .projects__button{
   color: var(--title-color);
-  font-size: var(--small-font-size);
+  font-size: var(--regular-font-size);
 }
 
 .projects__subtitle{
@@ -519,12 +520,12 @@ svg {
 .projects__button{
   display:flex;
   align-items:center;
-  column-gap:.5rem;
+  column-gap:.3rem;
   font-weight:var(--font-medium);
 }
 
 .projects__button i{
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 
 .projects__card:hover .projects__modal{
@@ -879,4 +880,10 @@ svg {
   .scrollup{
     right: 3rem;
   }
+}
+
+
+
+.ri-github-line {
+  color: hsl(210, 100%, 70%);
 }
