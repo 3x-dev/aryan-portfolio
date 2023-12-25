@@ -882,8 +882,12 @@ svg {
   }
 }
 
-
+/* Change colors of icons */
 
 .ri-github-line {
+  color: hsl(210, 100%, 70%);
+}
+
+.ri-article-fill {
   color: hsl(210, 100%, 70%);
 }
