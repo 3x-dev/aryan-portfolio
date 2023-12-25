@@ -490,8 +490,8 @@ svg {
   background: linear-gradient(180deg,
               hsla(0, 0%, 0%, 0) 0%,
               hsla(var(--hue), 70%, 40%, .8) 120%);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
   border-radius: 1rem;
   display:flex;
   flex-direction: column;
@@ -889,5 +889,9 @@ svg {
 }
 
 .ri-article-fill {
+  color: hsl(210, 100%, 70%);
+}
+
+.ri-pages-fill {
   color: hsl(210, 100%, 70%);
 }
