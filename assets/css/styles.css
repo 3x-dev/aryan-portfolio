@@ -423,37 +423,41 @@ svg {
 
 /*=============== SERVICES ===============*/
 
-.services__container{
+.services__container {
+  display: flex; /* This will create a flex container which aligns children in a row by default */
+  flex-wrap: wrap; /* This allows the items to wrap onto the next line if the container is not wide enough */
+  justify-content: center; /* This will center the items horizontally */
+  gap: 2rem; /* This creates space between the items */
   padding-block: 1rem;
 }
 
-
-.services__card{
+.services__card {
   text-align: center;
   background-color: var(--container-color);
   padding: 3rem 1.25rem;
   border-radius: 1rem;
   border: 2px solid var(--container-color);
   transition: border .4s;
-
-  margin: 2rem;
+  flex: 0 1 calc(33.333% - 4rem); /* This allows the cards to be flexible but not grow beyond 1/3 of the container width, minus the gap */
+  margin: 1rem; /* This margin may need to be adjusted or removed depending on your design */
 }
 
-.services__icon{
+.services__icon {
   display: block;
   font-size: 4rem;
   color: var(--first-color);
   margin-bottom: .75rem;
 }
 
-.services__title{
-  font-size:var(--h2-font-size);
-  margin-bottom:1.5rem;
+.services__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.5rem;
 }
 
-.services__card:hover{
+.services__card:hover {
   border: 3px solid var(--first-color);
 }
+
 
 /*=============== PROJECTS ===============*/
 .projects{
