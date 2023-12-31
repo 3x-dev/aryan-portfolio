@@ -458,7 +458,6 @@ svg {
   border: 3px solid var(--first-color);
 }
 
-
 /*=============== PROJECTS ===============*/
 .projects{
   background-color: var(--container-color);
@@ -477,8 +476,10 @@ svg {
 }
 
 .projects__img{
-  width:100%;
-  height:100%;
+  width: 85%; /* Adjust to your preferred width, smaller than 100% */
+  height: auto; /* This maintains the aspect ratio of the images */
+  display: block;
+  margin: 0 auto; /* Centers the image in the card */
 }
 
 .projects__modal{
@@ -488,10 +489,10 @@ svg {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg,
-              hsla(0, 0%, 0%, 0) 0%,
-              hsla(var(--hue), 70%, 40%, .8) 120%);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
+              hsla(0, 0%, 0%, 0.35) 0%, /* Increase the starting opacity */
+              hsla(var(--hue), 70%, 20%, 0.9) 100%); /* Make the end color darker and more opaque */
+  backdrop-filter: blur(10px); /* Increase the blur intensity */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
   border-radius: 1rem;
   display:flex;
   flex-direction: column;
@@ -576,6 +577,7 @@ svg {
   font-size: var(--small-font-size);
   color: var(--title-color);
 }
+
 /*=============== FOOTER ===============*/
 .footer{
   background-color: var(--container-color);
