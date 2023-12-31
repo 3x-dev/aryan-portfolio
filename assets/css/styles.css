@@ -154,7 +154,7 @@ svg {
 }
 
 /*=============== HEADER & NAV ===============*/
-.header{
+.header {
   position: fixed;
   width: 100%;
   background-color: var(--container-color);
@@ -163,24 +163,33 @@ svg {
   z-index: var(--z-fixed);
 }
 
-.nav{
+.nav {
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav__logo{
+.nav__logo {
   color: var(--title-color);
   font-weight: var(--font-medium);
+  display: flex; /* Ensures that the logo and text are part of a flexbox layout */
+  align-items: center; /* Vertically centers the logo with the text */
 }
 
-.nav__logo span{
+.nav__logo img {
+  vertical-align: middle; /* Aligns the image vertically with the text */
+  margin-right: 8px; /* Adjust the right margin as needed */
+  height: auto; /* Adjust height as needed */
+  /* If the image is still too large/small, adjust the width property */
+}
+
+.nav__logo span {
   color: var(--first-color);
 }
 
 .nav__toggle,
-.nav__close{
+.nav__close {
   display: flex;
   font-size: 1.25rem;
   color: var(--title-color);
