@@ -906,3 +906,12 @@ svg {
 .ri-pages-fill {
   color: hsl(210, 100%, 70%);
 }
+
+.streamlit-app {
+  text-align: center; /* Center horizontally */
+}
+.streamlit-app iframe {
+  width: 315%; /* Adjust the width as needed */
+  margin: auto; /* Center horizontally */
+  /* Other styles for iframe */
+}
