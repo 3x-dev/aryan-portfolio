@@ -206,8 +206,8 @@ svg {
     width: 75%;
     height: 100%;
     padding: 4.5rem 0 0 3rem;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     transition: right .4s;
   }
 }
@@ -250,8 +250,8 @@ svg {
   width: 1000%;
   height: 100%;
   background-color: hsla(0, 0%, 10%, .3);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   top: 0;
   left: 0;
   z-index: -1;
@@ -773,8 +773,8 @@ svg {
   }
 
   .blur-header::after{
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(35px);
+    -webkit-backdrop-filter: blur(35px);
   }
 }
 
