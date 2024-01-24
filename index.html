@@ -486,10 +486,34 @@
 
 
       <!--========== AUDIO ==========-->
-      <audio autoplay loop hidden>
+      <!-- <style>
+         #playButton {
+             padding: 10px 20px;
+             font-size: 16px;
+             cursor: pointer;
+         }
+     </style>
+
+      <button id="playButton">Play Music</button>
+
+      <audio id="backgroundMusic" loop hidden>
          <source src="assets/audio/music.mp3" type="audio/mpeg">
          Your browser does not support the audio element.
-     </audio>
+      </audio>
+
+      <script>
+         document.getElementById('playButton').addEventListener('click', function() {
+               var audio = document.getElementById('backgroundMusic');
+               // Check if playing and toggle
+               if (audio.paused) {
+                  audio.play();
+                  this.textContent = 'Pause Music'; // Optional: Change button text to 'Pause Music'
+               } else {
+                  audio.pause();
+                  this.textContent = 'Play Music';  // Optional: Change button text to 'Play Music'
+               }
+         });
+      </script> -->
 
       <!--========== SCROLL UP ==========-->
       <a href="#" class="scrollup" id="scroll-up">
