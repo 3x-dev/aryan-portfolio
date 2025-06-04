@@ -17,7 +17,6 @@ if(navClose){
     })
 }
 
-
 /*=============== REMOVE MENU MOBILE ===============*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -28,6 +27,21 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+/*=============== PERFORMANCE OPTIMIZATION ===============*/
+// Throttle function for better performance
+function throttle(func, limit) {
+    let inThrottle;
+    return function() {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    }
+}
+
 /*=============== ADD BLUR TO HEADER ===============*/
 const blurHeader = () =>{
     const header = document.getElementById('header')
@@ -35,7 +49,59 @@ const blurHeader = () =>{
     this.scrollY >= 50 ? header.classList.add('blur-header') 
                        : header.classList.remove('blur-header')
 }
-window.addEventListener('scroll', blurHeader)
+
+/*=============== SHOW SCROLL UP ===============*/ 
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
+}
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]');
+
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
+
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 58;
+        const sectionId = current.getAttribute('id');
+        const sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
+
+        if (sectionsClass) {
+            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link');
+            } else {
+                sectionsClass.classList.remove('active-link');
+            }
+        }
+    });
+};
+
+// Apply throttling to scroll-dependent functions
+const throttledBlurHeader = throttle(blurHeader, 16);
+const throttledScrollUp = throttle(scrollUp, 16);
+const throttledScrollActive = throttle(scrollActive, 16);
+
+window.addEventListener('scroll', throttledBlurHeader);
+window.addEventListener('scroll', throttledScrollUp);
+window.addEventListener('scroll', throttledScrollActive);
+
+/*=============== SMOOTH SCROLLING ===============*/
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
 /*=============== EMAIL JS ===============*/
 const contactForm = document.getElementById('contact-form'),
@@ -66,51 +132,166 @@ const sendEmail = (e) =>{
 
 contactForm.addEventListener('submit', sendEmail)
 
-/*=============== SHOW SCROLL UP ===============*/ 
-const scrollUp = () =>{
-	const scrollUp = document.getElementById('scroll-up')
-    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
-	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-						: scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
-/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
-const sections = document.querySelectorAll('section[id]');
-
-const scrollActive = () => {
-    const scrollDown = window.scrollY;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 58; // Adjust as necessary
-        const sectionId = current.getAttribute('id');
-        const sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']');
-
-        // Check if the navbar link exists before trying to add/remove classes
-        if (sectionsClass) {
-            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-                sectionsClass.classList.add('active-link');
-            } else {
-                sectionsClass.classList.remove('active-link');
-            }
-        }
-    });
-};
-
-window.addEventListener('scroll', scrollActive);
-
-
-/*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== CLEAN SCROLL REVEAL ANIMATIONS ===============*/
+// Initialize ScrollReveal with optimized settings
 const sr = ScrollReveal({
+    origin: 'bottom',
+    distance: '60px',
+    duration: 1000,
+    delay: 100,
+    easing: 'ease-out',
+    reset: false,
+    viewFactor: 0.15,
+    mobile: true,
+    desktop: true
+});
+
+// Home section animations - Simple and clean
+sr.reveal('.home__data', {
+    origin: 'top',
+    distance: '80px',
+    duration: 1200,
+    delay: 200
+});
+
+sr.reveal('.home__social', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 800,
+    delay: 600
+});
+
+sr.reveal('.home__image', {
+    origin: 'right',
+    distance: '100px',
+    duration: 1000,
+    delay: 400
+});
+
+// About section animations
+sr.reveal('.about__data', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1000,
+    delay: 200
+});
+
+sr.reveal('.about__image', {
+    origin: 'right',
+    distance: '80px',
+    duration: 1000,
+    delay: 400
+});
+
+// Skills section animations
+sr.reveal('.skills__data', {
+    origin: 'left',
+    distance: '80px',
+    duration: 1000,
+    delay: 200
+});
+
+sr.reveal('.skills__content', {
+    origin: 'right',
+    distance: '80px',
+    duration: 1000,
+    delay: 400
+});
+
+sr.reveal('.skills__group', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 800,
+    interval: 200,
+    delay: 600
+});
+
+// Services section animations
+sr.reveal('.services .section__subtitle', {
     origin: 'top',
     distance: '60px',
-    duration: 2500,
-    delay: 400,
-    // reset: true // Animation repeat
-})
-sr.reveal('home__data, .home__social, .contact__container, .footer__container')
-sr.reveal('home__image', {origin: 'bottom'})
-sr.reveal('about__data, .skills__data', {origin: 'left'})
-sr.reveal('about__image, .skills__content', {origin: 'right'})
-sr.reveal('services__card, .projects__card', {interval: 100})
+    duration: 800,
+    delay: 100
+});
+
+sr.reveal('.services .section__title', {
+    origin: 'top',
+    distance: '60px',
+    duration: 800,
+    delay: 200
+});
+
+sr.reveal('.services__card', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    interval: 200,
+    delay: 300
+});
+
+// Projects section animations
+sr.reveal('.projects .section__subtitle', {
+    origin: 'top',
+    distance: '60px',
+    duration: 800,
+    delay: 100
+});
+
+sr.reveal('.projects .section__title', {
+    origin: 'top',
+    distance: '60px',
+    duration: 800,
+    delay: 200
+});
+
+sr.reveal('.projects__card', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    interval: 150,
+    delay: 300
+});
+
+// Contact section animations
+sr.reveal('.contact .section__subtitle', {
+    origin: 'top',
+    distance: '60px',
+    duration: 800,
+    delay: 100
+});
+
+sr.reveal('.contact .section__title', {
+    origin: 'top',
+    distance: '60px',
+    duration: 800,
+    delay: 200
+});
+
+sr.reveal('.contact__form', {
+    origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 400
+});
+
+// Footer animations
+sr.reveal('.footer__title', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 800,
+    delay: 200
+});
+
+sr.reveal('.footer__education', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 800,
+    delay: 300
+});
+
+sr.reveal('.footer__social', {
+    origin: 'bottom',
+    distance: '60px',
+    duration: 800,
+    delay: 400
+});
