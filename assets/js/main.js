@@ -156,9 +156,20 @@ sr.reveal('.home__data', {
 
 sr.reveal('.home__social', {
     origin: 'bottom',
+    distance: '80px',
+    duration: 1000,
+    delay: 600,
+    easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+});
+
+// Individual social link animations with stagger effect
+sr.reveal('.home__social-link', {
+    origin: 'bottom',
     distance: '60px',
     duration: 800,
-    delay: 600
+    delay: 800,
+    interval: 150,
+    easing: 'ease-out'
 });
 
 sr.reveal('.home__image', {
@@ -291,7 +302,18 @@ sr.reveal('.footer__education', {
 
 sr.reveal('.footer__social', {
     origin: 'bottom',
-    distance: '60px',
-    duration: 800,
-    delay: 400
+    distance: '80px',
+    duration: 1000,
+    delay: 400,
+    easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+});
+
+// Individual footer social link animations
+sr.reveal('.footer__social-link', {
+    origin: 'bottom',
+    distance: '40px',
+    duration: 600,
+    delay: 600,
+    interval: 100,
+    easing: 'ease-out'
 });
