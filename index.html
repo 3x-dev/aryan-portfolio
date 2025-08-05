@@ -1,396 +1,430 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
+<html lang="en">
 
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4552685804180408"
+<head>
+
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4552685804180408"
       crossorigin="anonymous"></script>
 
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!--=============== SITE ICON ON BROWSER TAB ===============-->
-      <link rel="shortcut icon" href="assets/img/siteicon2.png" type="image/x-icon">
+   <!--=============== SITE ICON ON BROWSER TAB ===============-->
+   <link rel="shortcut icon" href="assets/img/siteicon2.png" type="image/x-icon">
 
-      <!--=============== REMIXICONS ===============-->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
+   <!--=============== REMIXICONS ===============-->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 
-      <!--=============== ICONIFY ===============-->
-      <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+   <!--=============== ICONIFY ===============-->
+   <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+   <script>
+      // Backup Iconify loader for Vercel
+      if (!window.Iconify) {
+         const script = document.createElement('script');
+         script.src = 'https://cdn.jsdelivr.net/npm/@iconify/iconify@2.2.1/dist/iconify.min.js';
+         document.head.appendChild(script);
+      }
+   </script>
 
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+   <!--=============== CSS ===============-->
+   <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>Aryan Singhal</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         <nav class = "nav container">
-            <a href="#" class="nav__logo">
-               <img src="assets/img/siteicon2.png" alt="Logo" style="height: 40px; margin-right: 2px;">Aryan&nbsp;<span>Singhal</span>
-            </a>
+   <title>Aryan Singhal</title>
+</head>
 
-            <div class="nav__menu" id="nav-menu">
-               <ul class="nav__list">
-                  <li class="nav__item">
-                     <a href="#home" class="nav__link active-link">Home</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#about" class="nav__link">About</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#skills" class="nav__link">Skills</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#projects" class="nav__link">Research & Projects</a>
-                  </li>
-                  <li class="nav__item">
-                     <a href="#contact" class="nav__link">Contact</a>
-                  </li>
-               </ul>
+<body>
+   <!--==================== HEADER ====================-->
+   <header class="header" id="header">
+      <nav class="nav container">
+         <a href="#" class="nav__logo">
+            <img src="assets/img/siteicon2.png" alt="Logo"
+               style="height: 40px; margin-right: 2px;">Aryan&nbsp;<span>Singhal</span>
+         </a>
 
-               <!-- Close Button -->
-               <div class="nav__close" id="nav-close">
-                  <i class="ri-close-line"></i>
-               </div>
+         <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+               <li class="nav__item">
+                  <a href="#home" class="nav__link active-link">Home</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#about" class="nav__link">About</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#skills" class="nav__link">Skills</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#projects" class="nav__link">Research & Projects</a>
+               </li>
+               <li class="nav__item">
+                  <a href="#contact" class="nav__link">Contact</a>
+               </li>
+            </ul>
+
+            <!-- Close Button -->
+            <div class="nav__close" id="nav-close">
+               <i class="ri-close-line"></i>
             </div>
+         </div>
 
-            <!-- Toggle Button -->
-            <div class="nav__toggle" id="nav-toggle">
-               <i class="ri-menu-line"></i>
-            </div>
-         </nav>
-      </header>
+         <!-- Toggle Button -->
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+         </div>
+      </nav>
+   </header>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            <div class="home__container container grid">
-               <div class="home__content">
-                  <div class="home__data">
-                     <h3 class="home__subtitle">
-                        Welcome, <span>I'm</span>
-                     </h3>
-
-                     <h1 class="home__title" style="font-size: 60px;">
-                        Aryan Singhal
-                     </h1>
-
-                     <h3 class="home__education">
-                        AI/ML Researcher & Engineer
-                     </h3>
-
-                     <p class="home__description">
-                        Embarking on the frontier of technology, I blend analytical rigor with a passion for innovation to drive the future of intelligent solutions...
-                     </p>
-
-                     <a href="#contact" class="button">Let's Chat!</a>
-                  </div>
-
-                  <div class="home__social">
-                     <!-- <a href="https://drive.google.com/file/d/1GnIehyjdf2dgrvuN2CxM9p_e8NO6ppM-/view?usp=sharing" target="_blank" class="home__social-link" style="--i: 0">
-                        <i class="ri-article-fill"></i>
-                    </a> -->
-                     <a href="https://github.com/3x-dev/" target="_blank" class="home__social-link" style="--i: 1">
-                        <i class="ri-github-fill"></i>
-                     </a>
-                     <a href="https://www.linkedin.com/in/aryan-singhal-ai/" target="_blank" class="home__social-link" style="--i: 2">
-                        <i class="ri-linkedin-box-line"></i>
-                     </a>
-                     <!-- <a href="https://devpost.com/aryan-singhal2016" target="_blank" class="home__social-link" style="--i: 3">
-                        <iconify-icon icon="simple-icons:devpost"></iconify-icon>
-                     </a> -->
-                     <a href="https://scholar.google.com/citations?user=QJn7KLkAAAAJ&hl=en" target="_blank" class="home__social-link" style="--i: 3">
-                        <iconify-icon icon="academicons:google-scholar"></iconify-icon>
-                    </a>
-                     <a href="https://twitter.com/AI3xtriple" target="_blank" class="home__social-link" style="--i: 4">
-                         <iconify-icon icon="bi:twitter-x"></iconify-icon>
-                     </a>
-                 
-                  </div>
-               </div>
-
-               <div class="home__image">
-                  <svg class = "home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
-                     <mask id="maskBlob" mask-type="alpha">
-                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
-                     </mask>
-                     <g mask="url(#maskBlob)">
-                        <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
-                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
-                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
-                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
-                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z"/>
-                  
-                        <rect x="37" width="476" height="630" fill="url(#pattern0)"/>
-                     </g>
-                  
-                     <rect x="37" width="476" height="300" fill="url(#pattern1)"/>
-                  
-                     <defs>
-                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                           <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
-                        </pattern>
-                  
-                        <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
-                           <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-                        </pattern>
-                  
-                        <!-- Insert your profile (recommended size: 640 x 940) -->
-                        <image class="home__img" id="imageBlob" width="640" height="940" href="assets/img/newpfp.png"/>
-                     </defs>
-                  </svg>
-               </div>
-            </div>
-         </section>
-
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            <div class="about__container container grid">
-               <div class="about__data">
-                  <h3 class="section__subtitle">
-                     My <span>Intro</span>
+   <!--==================== MAIN ====================-->
+   <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+         <div class="home__container container grid">
+            <div class="home__content">
+               <div class="home__data">
+                  <h3 class="home__subtitle">
+                     Welcome, <span>I'm</span>
                   </h3>
 
-                  <h2 class="section__title">
-                     About <span>Me</span>
-                  </h2>
+                  <h1 class="home__title" style="font-size: 60px;">
+                     Aryan Singhal
+                  </h1>
 
-                  <p class="about__description">
-                     👋 Hey! I'm Aryan, a researcher specializing in AI and ML, driven to make a positive impact through cutting-edge technology. My work focuses on tackling AI challenges, leveraging AI for societal good, and promoting ethical, responsible practices. I'm passionate about learning, expanding my expertise, and collaborating with ambitious, like-minded individuals.
+                  <h3 class="home__education">
+                     AI/ML Researcher & Engineer
+                  </h3>
+
+                  <p class="home__description">
+                     Embarking on the frontier of technology, I blend analytical rigor with a passion for innovation to
+                     drive the future of intelligent solutions...
                   </p>
 
-                  <a href="#contact" class="button">Contact Me</a>
+                  <a href="#contact" class="button">Let's Chat!</a>
                </div>
 
-               <div class="about__image">
-                  <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <mask id="maskBorder" mask-type="alpha">
-                        <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
+               <div class="home__social">
+                  <!-- <a href="https://drive.google.com/file/d/1GnIehyjdf2dgrvuN2CxM9p_e8NO6ppM-/view?usp=sharing" target="_blank" class="home__social-link" style="--i: 0">
+                        <i class="ri-article-fill"></i>
+                    </a> -->
+                  <a href="https://github.com/3x-dev/" target="_blank" class="home__social-link" style="--i: 1">
+                     <i class="ri-github-fill"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/aryan-singhal-ai/" target="_blank" class="home__social-link"
+                     style="--i: 2">
+                     <i class="ri-linkedin-box-line"></i>
+                  </a>
+                  <!-- <a href="https://devpost.com/aryan-singhal2016" target="_blank" class="home__social-link" style="--i: 3">
+                        <iconify-icon icon="simple-icons:devpost"></iconify-icon>
+                     </a> -->
+                  <a href="https://scholar.google.com/citations?user=QJn7KLkAAAAJ&hl=en" target="_blank"
+                     class="home__social-link" style="--i: 3">
+                     <span class="iconify" data-icon="academicons:google-scholar"></span>
+                  </a>
+                  <a href="https://twitter.com/AI3xtriple" target="_blank" class="home__social-link" style="--i: 4">
+                     <span class="iconify" data-icon="bi:twitter-x"></span>
+                  </a>
+
+               </div>
+            </div>
+
+            <div class="home__image">
+               <svg class="home__blob" viewBox="0 0 550 591" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="maskBlob" mask-type="alpha">
+                     <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
+                  </mask>
+                  <g mask="url(#maskBlob)">
+                     <path d="M263 47.1782C270.426 42.891 279.574 42.891 287 47.1782L501.157 
+                        170.822C508.583 175.109 513.157 183.032 513.157 191.606V438.894C513.157 
+                        447.468 508.583 455.391 501.157 459.678L287 583.322C279.574 587.609 270.426 
+                        587.609 263 583.322L48.843 459.678C41.4174 455.391 36.843 447.468 36.843 
+                        438.894V191.606C36.843 183.032 41.4174 175.109 48.843 170.822L263 47.1782Z" />
+
+                     <rect x="37" width="476" height="630" fill="url(#pattern0)" />
+                  </g>
+
+                  <rect x="37" width="476" height="300" fill="url(#pattern1)" />
+
+                  <defs>
+                     <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
+                     </pattern>
+
+                     <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use href="#imageBlob" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
+                     </pattern>
+
+                     <!-- Insert your profile (recommended size: 640 x 940) -->
+                     <image class="home__img" id="imageBlob" width="640" height="940" href="assets/img/newpfp.png" />
+                  </defs>
+               </svg>
+            </div>
+         </div>
+      </section>
+
+      <!--==================== ABOUT ====================-->
+      <section class="about section" id="about">
+         <div class="about__container container grid">
+            <div class="about__data">
+               <h3 class="section__subtitle">
+                  My <span>Intro</span>
+               </h3>
+
+               <h2 class="section__title">
+                  About <span>Me</span>
+               </h2>
+
+               <p class="about__description">
+                  👋 Hey! I'm Aryan, a researcher specializing in AI and ML, driven to make a positive impact through
+                  cutting-edge technology. My work focuses on tackling AI challenges, leveraging AI for societal good,
+                  and promoting ethical, responsible practices. I'm passionate about learning, expanding my expertise,
+                  and collaborating with ambitious, like-minded individuals.
+               </p>
+
+               <a href="#contact" class="button">Contact Me</a>
+            </div>
+
+            <div class="about__image">
+               <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="maskBorder" mask-type="alpha">
+                     <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
                         171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
                         448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
                         270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
-                        439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
-                     </mask>
-                     <g mask="url(#maskBorder)">
-                        <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
-                        
-                        <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
+                        439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black" />
+                  </mask>
+                  <g mask="url(#maskBorder)">
+                     <rect x="37" width="476" height="630" fill="url(#pattern2)" />
+
+                     <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
                         192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
                         580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
                         40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
-                        175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
-                     </g>
-                  
-                     <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
-                  
-                     <defs>
-                        <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                           <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
-                        </pattern>
-                  
-                        <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
-                           <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
-                        </pattern>
-                  
-                        <!-- Insert your profile (recommended size: 640 x 940) -->
-                        <image class="about__img" id="imageBorder" width="640" height="980" href="assets/img/nobkg.png"/>
-                     </defs>
-                  </svg>
-               </div>
+                        175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black"
+                        stroke-width="10" />
+                  </g>
+
+                  <rect x="37" width="476" height="300" fill="url(#pattern3)" />
+
+                  <defs>
+                     <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)" />
+                     </pattern>
+
+                     <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)" />
+                     </pattern>
+
+                     <!-- Insert your profile (recommended size: 640 x 940) -->
+                     <image class="about__img" id="imageBorder" width="640" height="980" href="assets/img/nobkg.png" />
+                  </defs>
+               </svg>
             </div>
-         </section>
+         </div>
+      </section>
 
-         <!--==================== SKILLS ====================-->
-         <section class="skills section" id="skills">
-            <div class ="skills__container container grid">
-               <div class="skills__data">
-                  <h3 class="section__subtitle">
-                     Industry <span>Skills</span>
-                  </h3>
+      <!--==================== SKILLS ====================-->
+      <section class="skills section" id="skills">
+         <div class="skills__container container grid">
+            <div class="skills__data">
+               <h3 class="section__subtitle">
+                  Industry <span>Skills</span>
+               </h3>
 
-                  <h2 class="section__title">
-                     My Skills
-                  </h2>
+               <h2 class="section__title">
+                  My Skills
+               </h2>
 
-                  <p class="skills__description">
-                     Programming languages and frameworks I have mastered over the years.
-                  </p>
+               <p class="skills__description">
+                  Programming languages and frameworks I have mastered over the years.
+               </p>
 
-                  <a href="#projects" class="button">See Projects</a>
-               </div>
-
-               <div class="skills__content">
-                  <ol class="skills__group">
-                     <li class="skills__item">Python</li>
-                     <li class="skills__item">Java</li>
-                     <li class="skills__item">Javascript</li>
-                     <li class="skills__item">HTML + CSS</li>
-                     <li class="skills__item">SQL</li>
-                  </ol>
-
-                  <ol class="skills__group" start="6">
-                     <li class="skills__item">Natural Language Processing</li>
-                     <li class="skills__item">Computer Vision</li>
-                     <li class="skills__item">Transformers</li>
-                     <li class="skills__item">PyTorch</li>
-                     <li class="skills__item">TensorFlow</li>
-                  </ol>
-               </div>
-            </div>
-         </section>
-
-         <!--==================== SERVICES ====================-->
-         <section class="services section" id="services">
-            <h3 class="section__subtitle">
-               Industry <span>Positions</span>
-            </h3>
-
-            <h2 class="section__title">
-               What I Do
-            </h2>
-
-            <div class="services__container container">
-               
-               <article class="services__card">
-                  <i class="ri-line-chart-fill services__icon"></i>
-                  <h2 class="services__title">
-                     AI/ML Engineer
-                  </h2>
-
-                  <p class="services__description">
-                     I specialize in building machine learning models that solve real-world problems, from detecting and preventing the spread of political misinformation to diagnosing the early stages of Alzheimer's disease. I focus on creating ethical and impactful AI solutions.
-                  </p>
-               </article>
-
-
-               <article class="services__card">
-                  <i class="ri-survey-line services__icon"></i>
-                  <h2 class="services__title">
-                     AI/ML Researcher
-                  </h2>
-
-                  <p class="services__description">
-                     I conduct interdisciplinary research focused on responsible AI, improving fairness, and reducing bias in models. My work, which aims to create solutions that bring a net positive impact, has been presented at prestigious conferences like NeurIPS, EMNLP, and ACL.
-               </article>
-
-
-               <article class="services__card">
-                  <i class="ri-layout-3-line services__icon"></i>
-
-                  <h2 class="services__title">
-                     Web Developer
-                  </h2>
-
-                  <p class="services__description">
-                     I design and build advanced web applications that seamlessly integrate AI technologies such as OpenAI's ChatGPT using Python, Firestore, and various APIs. I focus on delivering powerful, intuitive digital solutions that bridge cutting-edge AI with real-world applications.
-                  </p>
-               </article>
+               <a href="#projects" class="button">See Projects</a>
             </div>
 
-         </section>
+            <div class="skills__content">
+               <ol class="skills__group">
+                  <li class="skills__item">Python</li>
+                  <li class="skills__item">Java</li>
+                  <li class="skills__item">Javascript</li>
+                  <li class="skills__item">HTML + CSS</li>
+                  <li class="skills__item">SQL</li>
+               </ol>
 
-         <!--==================== PROJECTS ====================-->
-         <section class="projects section" id="projects">
-            <h3 class="section__subtitle">
-               My <span>Projects</span>
-            </h3>
+               <ol class="skills__group" start="6">
+                  <li class="skills__item">Natural Language Processing</li>
+                  <li class="skills__item">Computer Vision</li>
+                  <li class="skills__item">Transformers</li>
+                  <li class="skills__item">PyTorch</li>
+                  <li class="skills__item">TensorFlow</li>
+               </ol>
+            </div>
+         </div>
+      </section>
 
-            <h2 class="section__title">
-               My Recent Work
-            </h2>
+      <!--==================== SERVICES ====================-->
+      <section class="services section" id="services">
+         <h3 class="section__subtitle">
+            Industry <span>Positions</span>
+         </h3>
 
-            <div class="projects__container container grid">
+         <h2 class="section__title">
+            What I Do
+         </h2>
 
-               <article class="projects__card">
-                  <img src="assets/img/fact.png" alt="projects image" class="projects__img">
-              
-                  <div class="projects__modal">
-                     <h2 class="projects__title">Multilingual Fact-Checking with MLLMs</h2>
-                     <span class="projects__subtitle">Evaluated the multilingual fact-checking abilities of MLLMs across 5 languages.<br>Accepted to NLP for Positive Impact @ EMNLP 2024.</span>
-                     
-                     <a href="https://aclanthology.org/2024.nlp4pi-1.2/" class="projects__button" target="_blank">
-                        Read EMNLP 2024 Paper<i class="ri-article-fill"></i>
-                     </a>
-   
-                  </div>
-               </article>
-               
-               <article class="projects__card">
-                  <img src="assets/img/quantum.jpg" alt="projects image" class="projects__img">
-            
-                  <div class="projects__modal">
-                     <h2 class="projects__title">Predicting Alzheimer's with<br>a Novel QViT</h2>
-                     <span class="projects__subtitle">Developed QViSTA: First ever quantum vision transformer (QViT) to predict early stages of Alzheimer's with novel VQCs.<br>Accepted to GenAI4Health @ NeurIPS 2024.</span>
-                     
-                     <a href="https://openreview.net/forum?id=suWYAfyWBa" class="projects__button" target="_blank">
-                        Read NeurIPS 2024 Paper<i class="ri-article-fill"></i>
-                     </a>
-                     <a href="https://github.com/3x-dev/QViSTA" class="projects__button" target="_blank">
-                        View GitHub<i class="ri-github-line"></i>
-                     </a>
+         <div class="services__container container">
 
-                  </div>
-               </article>
+            <article class="services__card">
+               <i class="ri-line-chart-fill services__icon"></i>
+               <h2 class="services__title">
+                  AI/ML Engineer
+               </h2>
 
-               <article class="projects__card">
-                  <img src="assets/img/chatgpticon.webp" alt="projects image" class="projects__img">
-            
-                  <div class="projects__modal">
-                     <h2 class="projects__title">Mitigating Political Bias<br>in ChatGPT</h2>
-                     <span class="projects__subtitle">Leveraged Constitutional AI (CAI)<br>& Chain of Thought (COT) prompting<br>to mitigate political bias in ChatGPT. Presented both @ SCCUR 2023.</span>
-                     
-                     <a href="https://doi.org/10.59720/24-047" class="projects__button" target="_blank">
-                        Read CAI Paper (JEI)<i class="ri-article-fill"></i>
-                     </a>
-                     <a href="https://doi.org/10.22214/ijraset.2024.58057" class="projects__button" target="_blank">
-                        Read COT Paper (IJRASET)<i class="ri-article-fill"></i>
-                     </a>
-                     <a href="https://github.com/3x-dev/ChatGPT-Political-Bias-Mitigation-ConstitutionalAI" class="projects__button" target="_blank">
-                        View GitHub<i class="ri-github-line"></i>
-                     </a>
-                  </div>
-               </article>
+               <p class="services__description">
+                  I specialize in building machine learning models that solve real-world problems, from detecting and
+                  preventing the spread of political misinformation to diagnosing the early stages of Alzheimer's
+                  disease. I focus on creating ethical and impactful AI solutions.
+               </p>
+            </article>
 
-               <article class="projects__card">
-                  <img src="assets/img/bias.png" alt="projects image" class="projects__img">
-            
-                  <div class="projects__modal">
-                     <h2 class="projects__title">Bias in Multilingual<br>LLMs for Cross-Language<br>Claim Verification</h2>
-                     <span class="projects__subtitle">Investigated translation and accuracy<br>bias and in LLMs for cross-lingual claim verification across 15 languages.<br>Accepted to ATTRIB @ NeurIPS 2024.</span>
-                     
-                     <a href="https://arxiv.org/abs/2410.10303" class="projects__button" target="_blank">
-                        Read NeurIPS 2024 Paper<i class="ri-article-fill"></i>
-                     </a>
-                     <a href="https://github.com/3x-dev/Comparative-Study-of-Bias-and-Accuracy-in-Multilingual-LLMs-for-Cross-Language-Claim-Verification" class="projects__button" target="_blank">
-                        View GitHub<i class="ri-github-line"></i>
-                     </a>
-                  </div>
-               </article>
 
-               <article class="projects__card">
-                  <img src="assets/img/twitter.png" alt="projects image" class="projects__img">
-            
-                  <div class="projects__modal">
-                     <h2 class="projects__title">Predicting Twitter Hate Speech Trends</h2>
-                     <span class="projects__subtitle">Scraped and predicted Twitter<br>hate speech trends using Binomial<br>Naive Bayes with 94.46% accuracy.</span>
-                     
-                     <a href="https://drive.google.com/file/d/1ta6eJ0ljn3tEbWQumVGq_HubPlpEmyXs/view" class="projects__button" target="_blank">
-                        Read Published Paper (MVRJ)<i class="ri-article-fill"></i>
-                     </a>
-                     <a href="https://github.com/3x-dev/Analyzing-Twitter-Hate-Speech-Trends-Using-Sentiment-Analysis" class="projects__button" target="_blank">
-                        View GitHub<i class="ri-github-line"></i>
-                     </a>
-                  </div>
-               </article>
+            <article class="services__card">
+               <i class="ri-survey-line services__icon"></i>
+               <h2 class="services__title">
+                  AI/ML Researcher
+               </h2>
 
-              <!-- <article class="projects__card">
+               <p class="services__description">
+                  I conduct interdisciplinary research focused on responsible AI, improving fairness, and reducing bias
+                  in models. My work, which aims to create solutions that bring a net positive impact, has been
+                  presented at prestigious conferences like NeurIPS, EMNLP, and ACL.
+            </article>
+
+
+            <article class="services__card">
+               <i class="ri-layout-3-line services__icon"></i>
+
+               <h2 class="services__title">
+                  Web Developer
+               </h2>
+
+               <p class="services__description">
+                  I design and build advanced web applications that seamlessly integrate AI technologies such as
+                  OpenAI's ChatGPT using Python, Firestore, and various APIs. I focus on delivering powerful, intuitive
+                  digital solutions that bridge cutting-edge AI with real-world applications.
+               </p>
+            </article>
+         </div>
+
+      </section>
+
+      <!--==================== PROJECTS ====================-->
+      <section class="projects section" id="projects">
+         <h3 class="section__subtitle">
+            My <span>Projects</span>
+         </h3>
+
+         <h2 class="section__title">
+            My Recent Work
+         </h2>
+
+         <div class="projects__container container grid">
+
+            <article class="projects__card">
+               <img src="assets/img/fact.png" alt="projects image" class="projects__img">
+
+               <div class="projects__modal">
+                  <h2 class="projects__title">Multilingual Fact-Checking with MLLMs</h2>
+                  <span class="projects__subtitle">Evaluated the multilingual fact-checking abilities of MLLMs across 5
+                     languages.<br>Accepted to NLP for Positive Impact @ EMNLP 2024.</span>
+
+                  <a href="https://aclanthology.org/2024.nlp4pi-1.2/" class="projects__button" target="_blank">
+                     Read EMNLP 2024 Paper<i class="ri-article-fill"></i>
+                  </a>
+
+               </div>
+            </article>
+
+            <article class="projects__card">
+               <img src="assets/img/quantum.jpg" alt="projects image" class="projects__img">
+
+               <div class="projects__modal">
+                  <h2 class="projects__title">Predicting Alzheimer's with<br>a Novel QViT</h2>
+                  <span class="projects__subtitle">Developed QViSTA: First ever quantum vision transformer (QViT) to
+                     predict early stages of Alzheimer's with novel VQCs.<br>Accepted to GenAI4Health @ NeurIPS
+                     2024.</span>
+
+                  <a href="https://openreview.net/forum?id=suWYAfyWBa" class="projects__button" target="_blank">
+                     Read NeurIPS 2024 Paper<i class="ri-article-fill"></i>
+                  </a>
+                  <a href="https://github.com/3x-dev/QViSTA" class="projects__button" target="_blank">
+                     View GitHub<i class="ri-github-line"></i>
+                  </a>
+
+               </div>
+            </article>
+
+            <article class="projects__card">
+               <img src="assets/img/chatgpticon.webp" alt="projects image" class="projects__img">
+
+               <div class="projects__modal">
+                  <h2 class="projects__title">Mitigating Political Bias<br>in ChatGPT</h2>
+                  <span class="projects__subtitle">Leveraged Constitutional AI (CAI)<br>& Chain of Thought (COT)
+                     prompting<br>to mitigate political bias in ChatGPT. Presented both @ SCCUR 2023.</span>
+
+                  <a href="https://doi.org/10.59720/24-047" class="projects__button" target="_blank">
+                     Read CAI Paper (JEI)<i class="ri-article-fill"></i>
+                  </a>
+                  <a href="https://doi.org/10.22214/ijraset.2024.58057" class="projects__button" target="_blank">
+                     Read COT Paper (IJRASET)<i class="ri-article-fill"></i>
+                  </a>
+                  <a href="https://github.com/3x-dev/ChatGPT-Political-Bias-Mitigation-ConstitutionalAI"
+                     class="projects__button" target="_blank">
+                     View GitHub<i class="ri-github-line"></i>
+                  </a>
+               </div>
+            </article>
+
+            <article class="projects__card">
+               <img src="assets/img/bias.png" alt="projects image" class="projects__img">
+
+               <div class="projects__modal">
+                  <h2 class="projects__title">Bias in Multilingual<br>LLMs for Cross-Language<br>Claim Verification</h2>
+                  <span class="projects__subtitle">Investigated translation and accuracy<br>bias and in LLMs for
+                     cross-lingual claim verification across 15 languages.<br>Accepted to ATTRIB @ NeurIPS 2024.</span>
+
+                  <a href="https://arxiv.org/abs/2410.10303" class="projects__button" target="_blank">
+                     Read NeurIPS 2024 Paper<i class="ri-article-fill"></i>
+                  </a>
+                  <a href="https://github.com/3x-dev/Comparative-Study-of-Bias-and-Accuracy-in-Multilingual-LLMs-for-Cross-Language-Claim-Verification"
+                     class="projects__button" target="_blank">
+                     View GitHub<i class="ri-github-line"></i>
+                  </a>
+               </div>
+            </article>
+
+            <article class="projects__card">
+               <img src="assets/img/twitter.png" alt="projects image" class="projects__img">
+
+               <div class="projects__modal">
+                  <h2 class="projects__title">Predicting Twitter Hate Speech Trends</h2>
+                  <span class="projects__subtitle">Scraped and predicted Twitter<br>hate speech trends using
+                     Binomial<br>Naive Bayes with 94.46% accuracy.</span>
+
+                  <a href="https://drive.google.com/file/d/1ta6eJ0ljn3tEbWQumVGq_HubPlpEmyXs/view"
+                     class="projects__button" target="_blank">
+                     Read Published Paper (MVRJ)<i class="ri-article-fill"></i>
+                  </a>
+                  <a href="https://github.com/3x-dev/Analyzing-Twitter-Hate-Speech-Trends-Using-Sentiment-Analysis"
+                     class="projects__button" target="_blank">
+                     View GitHub<i class="ri-github-line"></i>
+                  </a>
+               </div>
+            </article>
+
+            <!-- <article class="projects__card">
                <img src="assets/img/fakenews.png" alt="projects image" class="projects__img">
            
                <div class="projects__modal">
@@ -404,7 +438,7 @@
              </article> -->
 
 
-             <!-- <article class="projects__card">
+            <!-- <article class="projects__card">
                <img src="assets/img/california.png" alt="projects image" class="projects__img">
            
                <div class="projects__modal">
@@ -417,20 +451,22 @@
                </div>
              </article> -->
 
-               <article class="projects__card">
-                  <img src="assets/img/globe.png" alt="projects image" class="projects__img">
-            
-                  <div class="projects__modal">
-                     <h2 class="projects__title">GeoMazer</h2>
-                     <span class="projects__subtitle">Built a geography-themed maze game<br>to reinforce U.S. and world geography concepts in students. Powered entirely by Java.</span>
-                     
-                     <a href="https://github.com/3x-dev/Java-Game-Project-GeoMazer" class="projects__button" target="_blank">
-                        View GitHub<i class="ri-github-line"></i>
-                     </a>
-                  </div>
-               </article>
+            <article class="projects__card">
+               <img src="assets/img/globe.png" alt="projects image" class="projects__img">
 
-             <!-- <article class="projects__card">
+               <div class="projects__modal">
+                  <h2 class="projects__title">GeoMazer</h2>
+                  <span class="projects__subtitle">Built a geography-themed maze game<br>to reinforce U.S. and world
+                     geography concepts in students. Powered entirely by Java.</span>
+
+                  <a href="https://github.com/3x-dev/Java-Game-Project-GeoMazer" class="projects__button"
+                     target="_blank">
+                     View GitHub<i class="ri-github-line"></i>
+                  </a>
+               </div>
+            </article>
+
+            <!-- <article class="projects__card">
                <img src="assets/img/website.png" alt="projects image" class="projects__img">
            
                <div class="projects__modal">
@@ -446,101 +482,105 @@
                </div>
              </article> -->
 
-               <!-- Streamlit App Embed -->
-               <!-- <div class="streamlit-app">
+            <!-- Streamlit App Embed -->
+            <!-- <div class="streamlit-app">
                   <iframe 
                      src="https://aryan-resume-improver.streamlit.app/?embedded=true" 
                      width="100%" 
                      height="700"
                      style="border:none;">
                   </iframe>
-               </div> -->               
-            </div>
-         </section>
+               </div> -->
+         </div>
+      </section>
 
-         <!--==================== CONTACT ====================-->
-         <section class="contact section" id="contact">
-            <h3 class="section__subtitle">
-               Get In <span>Touch</span>
-            </h3>
+      <!--==================== CONTACT ====================-->
+      <section class="contact section" id="contact">
+         <h3 class="section__subtitle">
+            Get In <span>Touch</span>
+         </h3>
 
-            <h2 class="section__title">
-               Contact Me
+         <h2 class="section__title">
+            Contact Me
+         </h2>
+
+         <div class="contact__container container grid">
+            <form action="" class="contact__form" id="contact-form">
+               <div class="contact__group">
+                  <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
+                  <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
+               </div>
+
+               <textarea name="user_project" required placeholder="Enter your message"
+                  class="contact__input"></textarea>
+
+               <p class="contact__message" id="contact-message"></p>
+
+               <button type="submit" class="button contact__button">
+                  Send Message
+               </button>
+            </form>
+         </div>
+      </section>
+   </main>
+
+   <!--==================== FOOTER ====================-->
+   <footer class="footer">
+      <div class="footer__container container grid">
+         <div>
+            <h1 class="footer__title">
+               Aryan <span>Singhal</span>
+            </h1>
+
+            <h2 class="footer__education">
+               AI/ML Researcher & Engineer
             </h2>
+         </div>
 
-            <div class="contact__container container grid">
-               <form action="" class="contact__form" id="contact-form">
-                  <div class="contact__group">
-                     <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
-                     <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
-                  </div>
-
-                  <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
-
-                  <p class="contact__message" id="contact-message"></p>
-
-                  <button type="submit" class="button contact__button">
-                     Send Message
-                  </button>
-               </form>
-            </div>
-         </section>
-      </main>
-
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         <div class="footer__container container grid">
-            <div>
-               <h1 class="footer__title">
-                  Aryan <span>Singhal</span>
-               </h1>
-
-               <h2 class="footer__education">
-                  AI/ML Researcher & Engineer
-               </h2>
-            </div>
-
-            <div class="footer__social">
-               <!-- <a href="https://drive.google.com/file/d/1GnIehyjdf2dgrvuN2CxM9p_e8NO6ppM-/view?usp=sharing" target="_blank" class="footer__social-link">
+         <div class="footer__social">
+            <!-- <a href="https://drive.google.com/file/d/1GnIehyjdf2dgrvuN2CxM9p_e8NO6ppM-/view?usp=sharing" target="_blank" class="footer__social-link">
                   <i class="ri-article-fill"></i>
                </a> -->
 
-               <a href="https://github.com/3x-dev/" target="_blank" class="footer__social-link">
-                  <i class="ri-github-fill"></i>
-               </a>
+            <a href="https://github.com/3x-dev/" target="_blank" class="footer__social-link" style="--i: 1">
+               <i class="ri-github-fill"></i>
+            </a>
 
-               <a href="https://www.linkedin.com/in/aryan-singhal-ai/" target="_blank" class="footer__social-link">
-                  <i class="ri-linkedin-box-fill"></i>
-               </a>
+            <a href="https://www.linkedin.com/in/aryan-singhal-ai/" target="_blank" class="footer__social-link"
+               style="--i: 2">
+               <i class="ri-linkedin-box-fill"></i>
+            </a>
 
-              <a href="https://scholar.google.com/citations?user=QJn7KLkAAAAJ&hl=en" target="_blank" class="footer__social-link">
-                  <iconify-icon icon="academicons:google-scholar"></iconify-icon>
-             </a>
+            <a href="https://scholar.google.com/citations?user=QJn7KLkAAAAJ&hl=en" target="_blank"
+               class="footer__social-link" style="--i: 3">
+               <span class="iconify" data-icon="academicons:google-scholar"></span>
+            </a>
 
-             <a href="https://twitter.com/AI3xtriple" target="_blank" class="footer__social-link">
-               <iconify-icon icon="bi:twitter-x"></iconify-icon>
-             </a>
-            </div>
-
-            <span class="footer__copy">
-               &#169; Copyright 2024 | Made with ❤️ by Aryan Singhal | All rights reserved
-            </span>
+            <a href="https://twitter.com/AI3xtriple" target="_blank" class="footer__social-link" style="--i: 4">
+               <span class="iconify" data-icon="bi:twitter-x"></span>
+            </a>
          </div>
-      </footer>
 
-      <!--========== SCROLL UP ==========-->
-      <a href="#" class="scrollup" id="scroll-up">
-         <i class="ri-arrow-up-double-fill"></i>
-      </a>
+         <span class="footer__copy">
+            &#169; Copyright 2024 | Made with ❤️ by Aryan Singhal | All rights reserved
+         </span>
+      </div>
+   </footer>
 
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src="assets/js/scrollreveal.min.js"></script>
+   <!--========== SCROLL UP ==========-->
+   <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-double-fill"></i>
+   </a>
 
-      <!--=============== EMAIL JS ===============-->
-      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+   <!--=============== SCROLLREVEAL ===============-->
+   <script src="assets/js/scrollreveal.min.js"></script>
+
+   <!--=============== EMAIL JS ===============-->
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+   <!--=============== MAIN JS ===============-->
+   <script src="assets/js/main.js"></script>
+</body>
+
 </html>

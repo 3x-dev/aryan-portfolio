@@ -355,14 +355,15 @@ svg {
   align-items: center;
   background-color: var(--first-color-alt);
   color: var(--title-color);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
-  width: 50px;
-  height: 55px;
-  opacity: 1;
-  visibility: visible;
+  width: 60px;
+  height: 65px;
+  opacity: 0;
+  transform: translateY(50px) rotateX(90deg);
+  visibility: hidden;
 }
 
 .home__social-link::before {
@@ -751,14 +752,15 @@ svg {
   justify-content: center;
   align-items: center;
   background-color: var(--first-color-alt);
-  padding: .5rem;
+  padding: .6rem;
   color: var(--title-color);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  transform: translateY(40px) rotateX(90deg);
+  visibility: hidden;
 }
 
 .footer__social-link::before {
@@ -1061,4 +1063,103 @@ svg {
   width: 315%; /* Adjust the width as needed */
   margin: auto; /* Center horizontally */
   /* Other styles for iframe */
+}
+
+/* Iconify span styling for Vercel compatibility */
+.iconify {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+/* Ensure iconify icons inherit font size from parent */
+.home__social-link .iconify,
+.footer__social-link .iconify {
+  font-size: inherit;
+  width: 1em;
+  height: 1em;
+}
+
+/* Fallback for when Iconify doesn't load */
+.iconify[data-icon="academicons:google-scholar"]:before {
+  content: "🎓";
+  font-size: 0.9em;
+}
+
+.iconify[data-icon="bi:twitter-x"]:before {
+  content: "𝕏";
+  font-size: 0.9em;
+}
+
+/* Streamlit app styling */
+.streamlit-app {
+  text-align: center;
+}
+
+.streamlit-app iframe {
+  width: 315%;
+  margin: auto;
+}
+
+/* Animation states for social icons */
+.home__social-link.animate-in,
+.footer__social-link.animate-in {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+  visibility: visible;
+}
+
+/* Keyframe animation for bounce effect */
+@keyframes socialBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateX(90deg) scale(0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-10px) rotateX(-10deg) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes footerSocialBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) rotateX(90deg) scale(0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(-8px) rotateX(-10deg) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg) scale(1);
+  }
+}
+
+/* Apply bounce animation */
+.home__social-link.bounce-in {
+  animation: socialBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.footer__social-link.bounce-in {
+  animation: footerSocialBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+/* Ensure icons are hidden initially for smooth animation */
+.home__social-link,
+.footer__social-link {
+  will-change: opacity, transform, visibility;
+}
+
+/* Fallback class to show social icons if ScrollReveal fails */
+.social-visible .home__social-link,
+.social-visible .footer__social-link {
+  opacity: 1 !important;
+  transform: translateY(0) rotateX(0deg) !important;
+  visibility: visible !important;
 }

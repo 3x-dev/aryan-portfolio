@@ -154,22 +154,20 @@ sr.reveal('.home__data', {
     delay: 200
 });
 
-sr.reveal('.home__social', {
-    origin: 'bottom',
-    distance: '80px',
-    duration: 1000,
-    delay: 600,
-    easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-});
-
-// Individual social link animations with stagger effect
+// Smooth social icons animation with bounce effect
 sr.reveal('.home__social-link', {
     origin: 'bottom',
-    distance: '60px',
-    duration: 800,
-    delay: 800,
-    interval: 150,
-    easing: 'ease-out'
+    distance: '0px',
+    duration: 100,
+    delay: 1000,
+    interval: 200,
+    reset: false,
+    beforeReveal: function(el, index) {
+        setTimeout(() => {
+            el.style.visibility = 'visible';
+            el.classList.add('bounce-in');
+        }, index * 200);
+    }
 });
 
 sr.reveal('.home__image', {
@@ -300,20 +298,53 @@ sr.reveal('.footer__education', {
     delay: 300
 });
 
-sr.reveal('.footer__social', {
-    origin: 'bottom',
-    distance: '80px',
-    duration: 1000,
-    delay: 400,
-    easing: 'cubic-bezier(0.175, 0.885, 0.32, 1.275)'
-});
-
-// Individual footer social link animations
+// Smooth footer social icons animation with bounce effect
 sr.reveal('.footer__social-link', {
     origin: 'bottom',
-    distance: '40px',
-    duration: 600,
-    delay: 600,
-    interval: 100,
-    easing: 'ease-out'
+    distance: '0px',
+    duration: 100,
+    delay: 800,
+    interval: 150,
+    reset: false,
+    beforeReveal: function(el, index) {
+        setTimeout(() => {
+            el.style.visibility = 'visible';
+            el.classList.add('bounce-in');
+        }, index * 150);
+    }
+});/*=
+============== ICONIFY FALLBACK FOR VERCEL ===============*/
+// Ensure Iconify icons load properly on Vercel
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if Iconify is loaded
+    if (typeof Iconify !== 'undefined') {
+        // Force Iconify to scan for icons
+        Iconify.scan();
+    } else {
+        // Fallback: retry loading Iconify after a delay
+        setTimeout(() => {
+            if (typeof Iconify !== 'undefined') {
+                Iconify.scan();
+            }
+        }, 1000);
+    }
+    
+});
+
+/*=============== SOCIAL ICONS FALLBACK ===============*/
+// Ensure social icons are visible if ScrollReveal fails to load
+window.addEventListener('load', function() {
+    // Check if ScrollReveal is working after 4 seconds
+    setTimeout(() => {
+        const socialLinks = document.querySelectorAll('.home__social-link, .footer__social-link');
+        socialLinks.forEach((link, index) => {
+            // If still hidden (ScrollReveal didn't work), show them with bounce animation
+            if (window.getComputedStyle(link).opacity === '0') {
+                setTimeout(() => {
+                    link.style.visibility = 'visible';
+                    link.classList.add('bounce-in');
+                }, index * 150);
+            }
+        });
+    }, 4000);
 });
