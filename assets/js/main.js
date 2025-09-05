@@ -300,19 +300,19 @@ if (typeof ScrollReveal !== 'undefined') {
         delay: 300
     });
 
-    // Smooth footer social icons animation with bounce effect
+    // Smooth footer social icons animation with bounce effect on scroll
     sr.reveal('.footer__social-link', {
         origin: 'bottom',
         distance: '0px',
-        duration: 100,
-        delay: 800,
-        interval: 150,
+        duration: 120,
+        interval: 120,
+        viewFactor: 0.1,
         reset: false,
         beforeReveal: function(el, index) {
             setTimeout(() => {
                 el.style.visibility = 'visible';
                 el.classList.add('bounce-in');
-            }, index * 150);
+            }, index * 120);
         }
     });
 }

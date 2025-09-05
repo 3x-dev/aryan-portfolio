@@ -398,6 +398,13 @@ svg {
   transform: translateY(-0.25rem) scale(1.05);
 }
 
+/* Slightly reduce SVG icon size within the hex frame */
+.home__social-link svg,
+.footer__social-link svg {
+  width: 0.9em;
+  height: 0.9em;
+}
+
 .home__image{
   justify-self: center;
 }
@@ -1123,8 +1130,8 @@ svg {
     transform: translateY(50px) rotateX(90deg) scale(0.3);
   }
   50% {
-    opacity: 0.8;
-    transform: translateY(-10px) rotateX(-10deg) scale(1.1);
+    opacity: 0.9;
+    transform: translateY(-6px) rotateX(-6deg) scale(1.06);
   }
   100% {
     opacity: 1;
@@ -1138,8 +1145,8 @@ svg {
     transform: translateY(40px) rotateX(90deg) scale(0.3);
   }
   50% {
-    opacity: 0.8;
-    transform: translateY(-8px) rotateX(-10deg) scale(1.1);
+    opacity: 0.9;
+    transform: translateY(-5px) rotateX(-5deg) scale(1.05);
   }
   100% {
     opacity: 1;
@@ -1149,11 +1156,11 @@ svg {
 
 /* Apply bounce animation */
 .home__social-link.bounce-in {
-  animation: socialBounce 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: socialBounce 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .footer__social-link.bounce-in {
-  animation: footerSocialBounce 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+  animation: footerSocialBounce 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 /* Ensure icons are hidden initially for smooth animation */
