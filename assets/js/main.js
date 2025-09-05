@@ -133,186 +133,190 @@ const sendEmail = (e) =>{
 contactForm.addEventListener('submit', sendEmail)
 
 /*=============== CLEAN SCROLL REVEAL ANIMATIONS ===============*/
-// Initialize ScrollReveal with optimized settings
-const sr = ScrollReveal({
-    origin: 'bottom',
-    distance: '60px',
-    duration: 1000,
-    delay: 100,
-    easing: 'ease-out',
-    reset: false,
-    viewFactor: 0.15,
-    mobile: true,
-    desktop: true
-});
+// Initialize ScrollReveal with optimized settings if available
+let sr = null;
+if (typeof ScrollReveal !== 'undefined') {
+    sr = ScrollReveal({
+        origin: 'bottom',
+        distance: '60px',
+        duration: 1000,
+        delay: 100,
+        easing: 'ease-out',
+        reset: false,
+        viewFactor: 0.15,
+        mobile: true,
+        desktop: true
+    });
 
-// Home section animations - Simple and clean
-sr.reveal('.home__data', {
-    origin: 'top',
-    distance: '80px',
-    duration: 1200,
-    delay: 200
-});
+    // Home section animations - Simple and clean
+    sr.reveal('.home__data', {
+        origin: 'top',
+        distance: '80px',
+        duration: 1200,
+        delay: 200
+    });
 
-// Smooth social icons animation with bounce effect
-sr.reveal('.home__social-link', {
-    origin: 'bottom',
-    distance: '0px',
-    duration: 100,
-    delay: 1000,
-    interval: 200,
-    reset: false,
-    beforeReveal: function(el, index) {
-        setTimeout(() => {
-            el.style.visibility = 'visible';
-            el.classList.add('bounce-in');
-        }, index * 200);
-    }
-});
+    // Smooth social icons animation with bounce effect
+    sr.reveal('.home__social-link', {
+        origin: 'bottom',
+        distance: '0px',
+        duration: 100,
+        delay: 1000,
+        interval: 200,
+        reset: false,
+        beforeReveal: function(el, index) {
+            setTimeout(() => {
+                el.style.visibility = 'visible';
+                el.classList.add('bounce-in');
+            }, index * 200);
+        }
+    });
 
-sr.reveal('.home__image', {
-    origin: 'right',
-    distance: '100px',
-    duration: 1000,
-    delay: 400
-});
+    sr.reveal('.home__image', {
+        origin: 'right',
+        distance: '100px',
+        duration: 1000,
+        delay: 400
+    });
 
-// About section animations
-sr.reveal('.about__data', {
-    origin: 'left',
-    distance: '80px',
-    duration: 1000,
-    delay: 200
-});
+    // About section animations
+    sr.reveal('.about__data', {
+        origin: 'left',
+        distance: '80px',
+        duration: 1000,
+        delay: 200
+    });
 
-sr.reveal('.about__image', {
-    origin: 'right',
-    distance: '80px',
-    duration: 1000,
-    delay: 400
-});
+    sr.reveal('.about__image', {
+        origin: 'right',
+        distance: '80px',
+        duration: 1000,
+        delay: 400
+    });
 
-// Skills section animations
-sr.reveal('.skills__data', {
-    origin: 'left',
-    distance: '80px',
-    duration: 1000,
-    delay: 200
-});
+    // Skills section animations
+    sr.reveal('.skills__data', {
+        origin: 'left',
+        distance: '80px',
+        duration: 1000,
+        delay: 200
+    });
 
-sr.reveal('.skills__content', {
-    origin: 'right',
-    distance: '80px',
-    duration: 1000,
-    delay: 400
-});
+    sr.reveal('.skills__content', {
+        origin: 'right',
+        distance: '80px',
+        duration: 1000,
+        delay: 400
+    });
 
-sr.reveal('.skills__group', {
-    origin: 'bottom',
-    distance: '60px',
-    duration: 800,
-    interval: 200,
-    delay: 600
-});
+    sr.reveal('.skills__group', {
+        origin: 'bottom',
+        distance: '60px',
+        duration: 800,
+        interval: 200,
+        delay: 600
+    });
 
-// Services section animations
-sr.reveal('.services .section__subtitle', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 100
-});
+    // Services section animations
+    sr.reveal('.services .section__subtitle', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 100
+    });
 
-sr.reveal('.services .section__title', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 200
-});
+    sr.reveal('.services .section__title', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 200
+    });
 
-sr.reveal('.services__card', {
-    origin: 'bottom',
-    distance: '80px',
-    duration: 1000,
-    interval: 200,
-    delay: 300
-});
+    sr.reveal('.services__card', {
+        origin: 'bottom',
+        distance: '80px',
+        duration: 1000,
+        interval: 200,
+        delay: 300
+    });
 
-// Projects section animations
-sr.reveal('.projects .section__subtitle', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 100
-});
+    // Projects section animations
+    sr.reveal('.projects .section__subtitle', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 100
+    });
 
-sr.reveal('.projects .section__title', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 200
-});
+    sr.reveal('.projects .section__title', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 200
+    });
 
-sr.reveal('.projects__card', {
-    origin: 'bottom',
-    distance: '80px',
-    duration: 1000,
-    interval: 150,
-    delay: 300
-});
+    sr.reveal('.projects__card', {
+        origin: 'bottom',
+        distance: '80px',
+        duration: 1000,
+        interval: 150,
+        delay: 300
+    });
 
-// Contact section animations
-sr.reveal('.contact .section__subtitle', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 100
-});
+    // Contact section animations
+    sr.reveal('.contact .section__subtitle', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 100
+    });
 
-sr.reveal('.contact .section__title', {
-    origin: 'top',
-    distance: '60px',
-    duration: 800,
-    delay: 200
-});
+    sr.reveal('.contact .section__title', {
+        origin: 'top',
+        distance: '60px',
+        duration: 800,
+        delay: 200
+    });
 
-sr.reveal('.contact__form', {
-    origin: 'bottom',
-    distance: '80px',
-    duration: 1000,
-    delay: 400
-});
+    sr.reveal('.contact__form', {
+        origin: 'bottom',
+        distance: '80px',
+        duration: 1000,
+        delay: 400
+    });
 
-// Footer animations
-sr.reveal('.footer__title', {
-    origin: 'bottom',
-    distance: '60px',
-    duration: 800,
-    delay: 200
-});
+    // Footer animations
+    sr.reveal('.footer__title', {
+        origin: 'bottom',
+        distance: '60px',
+        duration: 800,
+        delay: 200
+    });
 
-sr.reveal('.footer__education', {
-    origin: 'bottom',
-    distance: '60px',
-    duration: 800,
-    delay: 300
-});
+    sr.reveal('.footer__education', {
+        origin: 'bottom',
+        distance: '60px',
+        duration: 800,
+        delay: 300
+    });
 
-// Smooth footer social icons animation with bounce effect
-sr.reveal('.footer__social-link', {
-    origin: 'bottom',
-    distance: '0px',
-    duration: 100,
-    delay: 800,
-    interval: 150,
-    reset: false,
-    beforeReveal: function(el, index) {
-        setTimeout(() => {
-            el.style.visibility = 'visible';
-            el.classList.add('bounce-in');
-        }, index * 150);
-    }
-});/*=
+    // Smooth footer social icons animation with bounce effect
+    sr.reveal('.footer__social-link', {
+        origin: 'bottom',
+        distance: '0px',
+        duration: 100,
+        delay: 800,
+        interval: 150,
+        reset: false,
+        beforeReveal: function(el, index) {
+            setTimeout(() => {
+                el.style.visibility = 'visible';
+                el.classList.add('bounce-in');
+            }, index * 150);
+        }
+    });
+}
+/*=
 ============== ICONIFY FALLBACK FOR VERCEL ===============*/
 // Ensure Iconify icons load properly on Vercel
 document.addEventListener('DOMContentLoaded', function() {
