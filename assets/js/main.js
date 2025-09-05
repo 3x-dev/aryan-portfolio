@@ -342,6 +342,8 @@ window.addEventListener('load', function() {
             if (window.getComputedStyle(link).opacity === '0') {
                 setTimeout(() => {
                     link.style.visibility = 'visible';
+                    link.style.opacity = '1';
+                    link.style.transform = 'translateY(0) rotateX(0deg)';
                     link.classList.add('bounce-in');
                 }, index * 150);
             }

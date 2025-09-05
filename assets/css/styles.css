@@ -361,6 +361,9 @@ svg {
   position: relative;
   width: 60px;
   height: 65px;
+}
+
+.js .home__social-link {
   opacity: 0;
   transform: translateY(50px) rotateX(90deg);
   visibility: hidden;
@@ -758,6 +761,9 @@ svg {
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   position: relative;
+}
+
+.js .footer__social-link {
   opacity: 0;
   transform: translateY(40px) rotateX(90deg);
   visibility: hidden;
